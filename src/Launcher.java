@@ -19,8 +19,13 @@ public class Launcher {
     }
 
     static double averageSalary() {
-        int x = 0;
-        double avg = sumSalary();
+        boolean element = baseEmp != null;
+        int checkElement = 0;
+        for (int i = 0; i < baseEmp.length; i++) {
+            if (element)
+                checkElement++;
+        }
+        double avg = sumSalary() / checkElement;
         return avg;
     }
 
@@ -32,7 +37,6 @@ public class Launcher {
         baseEmp[1] = emp1;
         allDataEmp(baseEmp);
         System.out.println(averageSalary());
-
 
     }
 }

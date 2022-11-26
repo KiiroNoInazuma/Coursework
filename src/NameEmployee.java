@@ -1,5 +1,5 @@
 public class NameEmployee {
-    String name, patronymic, surname;
+    private String name, patronymic, surname;
 
 
     NameEmployee(String name, String patronymic, String surname) {
