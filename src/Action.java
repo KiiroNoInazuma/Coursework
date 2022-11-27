@@ -1,17 +1,17 @@
 public class Action {
     final static int LESS = 0;
     final static int MORE = 1;
-    static Employee[] baseEmp = new Employee[3];
+    private Employee[] baseEmp = new Employee[3];
 
 
-    static void allDataEmp() {
+    void allDataEmp() {
         for (Employee j : baseEmp) {
             if (j != null)
                 System.out.println(j);
         }
     }
 
-    static void allDataEmp(String depart) {
+    void allDataEmp(String depart) {
         for (Employee j : baseEmp) {
             if (j != null && j.getDepartment().equals(depart))
                 System.out.println(j.getId() + "." + j.getNameEmp() + "(" + j.getSalary() + ")");
@@ -19,7 +19,7 @@ public class Action {
     }
 
 
-    static void allFullName() {
+    void allFullName() {
         for (Employee j : baseEmp) {
             if (j != null)
                 System.out.println(j.getNameEmp());
@@ -27,7 +27,7 @@ public class Action {
     }
 
 
-    static void chooseSalary(double salary, int choose) {
+     void chooseSalary(double salary, int choose) {
         for (Employee j : baseEmp) {
             if (choose == 0) {
                 if (j != null && j.getSalary() <= salary)
@@ -40,25 +40,25 @@ public class Action {
     }
 
 
-    static void minSalary() {
+     void minSalary() {
         System.out.println(getMin());
     }
 
-    static void minSalary(String depart) {
+     void minSalary(String depart) {
         System.out.println(getMin(depart));
     }
 
 
-    static void maxSalary() {
+     void maxSalary() {
         System.out.println(getMax());
     }
 
-    static void maxSalary(String depart) {
+     void maxSalary(String depart) {
         System.out.println(getMax(depart));
     }
 
 
-    static double sumSalary() {
+     double sumSalary() {
         double sum = 0;
         for (int i = 0; i < baseEmp.length; i++) {
             if (baseEmp[i] != null) {
@@ -69,7 +69,7 @@ public class Action {
     }
 
 
-    static double sumSalary(String depart) {
+     double sumSalary(String depart) {
         double sum = 0;
         for (int i = 0; i < baseEmp.length; i++) {
             if (baseEmp[i] != null && baseEmp[i].getDepartment().equals(depart)) {
@@ -80,7 +80,7 @@ public class Action {
     }
 
 
-    static double averageSalary() {
+     double averageSalary() {
         int checkElement = 0;
         for (int i = 0; i < baseEmp.length; i++) {
             if (baseEmp[i] != null)
@@ -91,7 +91,7 @@ public class Action {
     }
 
 
-    static double averageSalary(String depart) {
+     double averageSalary(String depart) {
         int checkElement = 0;
         for (int i = 0; i < baseEmp.length; i++) {
             if (baseEmp[i] != null && baseEmp[i].getDepartment().equals(depart))
@@ -102,7 +102,7 @@ public class Action {
     }
 
 
-    static Employee getMin() {
+     Employee getMin() {
         double min = getMax().getSalary();
         int ind = 0;
         for (int i = 0; i < baseEmp.length; i++) {
@@ -115,7 +115,7 @@ public class Action {
         return baseEmp[ind];
     }
 
-    static Employee getMin(String depart) {
+     Employee getMin(String depart) {
         double min = getMax().getSalary();
         int ind = 0;
         for (int i = 0; i < baseEmp.length; i++) {
@@ -129,7 +129,7 @@ public class Action {
     }
 
 
-    static Employee getMax() {
+     Employee getMax() {
         double max = 0;
         int ind = 0;
         for (int i = 0; i < baseEmp.length; i++) {
@@ -143,7 +143,7 @@ public class Action {
     }
 
 
-    static Employee getMax(String depart) {
+     Employee getMax(String depart) {
         double max = 0;
         int ind = 0;
         for (int i = 0; i < baseEmp.length; i++) {
@@ -157,7 +157,7 @@ public class Action {
     }
 
 
-    static void indexationSalary(double indexS) {
+     void indexationSalary(double indexS) {
         for (int i = 0; i < baseEmp.length; i++) {
             if (baseEmp[i] != null) {
                 baseEmp[i].setSalary(baseEmp[i].getSalary() * (indexS / 100 + 1));
@@ -166,7 +166,7 @@ public class Action {
     }
 
 
-    static void indexationSalary(double indexS, String depart) {
+     void indexationSalary(double indexS, String depart) {
         for (int i = 0; i < baseEmp.length; i++) {
             if (baseEmp[i] != null && baseEmp[i].getDepartment().equals(depart)) {
                 baseEmp[i].setSalary(baseEmp[i].getSalary() * (indexS / 100 + 1));
@@ -175,7 +175,7 @@ public class Action {
     }
 
 
-    static void addEmployee(String department, String surname, String name, String patronymic, int salary) {
+     void addEmployee(String department, String surname, String name, String patronymic, int salary) {
         Employee add = new Employee(department, new NameEmployee(surname, name, patronymic), salary);
         Boolean check = true;
         for (int i = 0; i < baseEmp.length; i++) {
