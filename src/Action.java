@@ -1,4 +1,6 @@
 public class Action {
+    final static int LESS = 0;
+    final static int MORE = 1;
     static Employee[] baseEmp = new Employee[3];
 
 
@@ -23,6 +25,20 @@ public class Action {
                 System.out.println(j.getNameEmp());
         }
     }
+
+
+    static void chooseSalary(double salary, int choose) {
+        for (Employee j : baseEmp) {
+            if (choose == 0) {
+                if (j != null && j.getSalary() <= salary)
+                    System.out.println(j.getId() + "." + j.getNameEmp() + "(" + j.getSalary() + ")");
+            } else if (choose == 1) {
+                if (j != null && j.getSalary() >= salary)
+                    System.out.println(j.getId() + "." + j.getNameEmp() + "(" + j.getSalary() + ")");
+            }
+        }
+    }
+
 
     static void minSalary() {
         System.out.println(getMin());
@@ -141,7 +157,7 @@ public class Action {
     }
 
 
-    static void indexationSalary(int indexS) {
+    static void indexationSalary(double indexS) {
         for (int i = 0; i < baseEmp.length; i++) {
             if (baseEmp[i] != null) {
                 baseEmp[i].setSalary(baseEmp[i].getSalary() * (indexS / 100 + 1));
@@ -150,7 +166,7 @@ public class Action {
     }
 
 
-    static void indexationSalary(int indexS, String depart) {
+    static void indexationSalary(double indexS, String depart) {
         for (int i = 0; i < baseEmp.length; i++) {
             if (baseEmp[i] != null && baseEmp[i].getDepartment().equals(depart)) {
                 baseEmp[i].setSalary(baseEmp[i].getSalary() * (indexS / 100 + 1));
