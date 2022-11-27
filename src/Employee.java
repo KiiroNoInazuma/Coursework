@@ -1,6 +1,6 @@
 public class Employee {
-    static int counter = 1;
-    private int id = counter;
+    static private int counter = 1;
+    private final int id;
     private String department;
     private double salary;
     private NameEmployee nameEmp;
@@ -10,6 +10,7 @@ public class Employee {
         this.department = department;
         this.salary = salary;
         this.nameEmp = nameEmp;
+        id = counter;
         counter++;
 
     }
