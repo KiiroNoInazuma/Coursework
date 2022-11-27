@@ -1,42 +1,13 @@
 import java.util.Arrays;
 
 public class Launcher {
-    static Employee[] baseEmp = new Employee[10];
-
-
-    static void allDataEmp(Employee[] emp) {
-        System.out.println(Arrays.toString(emp));
-    }
-
-    static double sumSalary() {
-        double sum = 0;
-        for (int i = 0; i < baseEmp.length; i++) {
-            if (baseEmp[i] != null) {
-                sum += baseEmp[i].getSalary();
-            }
-        }
-        return sum;
-    }
-
-    static double averageSalary() {
-        boolean element = baseEmp != null;
-        int checkElement = 0;
-        for (int i = 0; i < baseEmp.length; i++) {
-            if (element)
-                checkElement++;
-        }
-        double avg = sumSalary() / checkElement;
-        return avg;
-    }
-
-
     public static void main(String[] args) {
-        Employee emp = new Employee("1", new NameEmployee("Тестов", "Тест", "Тестович"), 100000.00);
-        Employee emp1 = new Employee("1", new NameEmployee("Тестов", "Тест", "Тестович"), 100000.00);
-        baseEmp[0] = emp;
-        baseEmp[1] = emp1;
-        allDataEmp(baseEmp);
-        System.out.println(averageSalary());
-
+        Action.addEmployee("1", "Тестов", "Тест", "Тестович", 100001);
+        Action.addEmployee("1", "Тестов", "Тест", "Тестович", 100002);
+        Action.addEmployee("1", "Тестов", "Тест", "Тестович", 100003);
+        Action.allDataEmp();
+        Action.allFullName();
+        Action.minSalary();
+        Action.maxSalary();
     }
 }

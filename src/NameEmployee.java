@@ -2,10 +2,10 @@ public class NameEmployee {
     private String name, patronymic, surname;
 
 
-    NameEmployee(String name, String patronymic, String surname) {
+    NameEmployee(String surname, String name, String patronymic) {
         this.name = name;
         this.patronymic = patronymic;
-        this.surname = patronymic;
+        this.surname = surname;
 
     }
 

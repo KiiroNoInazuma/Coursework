@@ -1,5 +1,5 @@
 public class Employee {
-    private int counter = 1;
+    static int counter = 1;
     private int id = counter;
     private String department;
     private double salary;
@@ -47,4 +47,3 @@ public class Employee {
         return id + "." + department + " --> " + nameEmp + "(" + salary + ");";
     }
 }
-/*Добавить в класс Employee поле id, которое проставляется из счетчика, а затем счетчик увеличивает свое значение.*/
