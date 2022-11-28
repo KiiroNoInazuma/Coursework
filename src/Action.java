@@ -182,12 +182,22 @@ public class Action {
     }
 
 
-//    void indexationSalary(NameEmployee data) {
-//        for (Employee employee : baseEmp) {
-//            if (employee != null) {
-//            }
-//        }
-//    }
+    void editSalary(String fullName, double editSalary) {
+        for (int i = 0; i < baseEmp.length; i++) {
+            if (baseEmp[i] != null && baseEmp[i].getNameEmp().toString().equals(fullName)) {
+               baseEmp[i].setSalary(editSalary);
+            }
+        }
+    }
+
+
+    void editDepartment(String fullName, String editSalary) {
+        for (int i = 0; i < baseEmp.length; i++) {
+            if (baseEmp[i] != null && baseEmp[i].getNameEmp().toString().equals(fullName)) {
+                baseEmp[i].setDepartment(editSalary);
+            }
+        }
+    }
 
 
     void addEmployee(String department, String surname, String name, String patronymic, int salary) {

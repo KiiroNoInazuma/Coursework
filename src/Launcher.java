@@ -7,7 +7,9 @@ public class Launcher {
         act.addEmployee("1", "Тестов", "Тест", "Тестович", 100001);
         act.addEmployee("2", "Тестов", "Тест", "Тестович", 100002);
         act.addEmployee("1", "Тестов", "Тест", "Тестович", 100005);
-        act.allFullName("1");
+        act.editSalary("Тестов Тест Тестович", 1);
 
+        act.editDepartment("Тестов Тест Тестович", "3");
+        act.allDataEmp();
     }
 }
