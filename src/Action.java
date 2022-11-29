@@ -1,9 +1,11 @@
 public class Action {
     final static int LESS = 0;
     final static int MORE = 1;
-    private Employee[] baseEmp = new Employee[10];
+    private Employee[] baseEmp;
 
-
+Action(int lng){
+    baseEmp = new Employee[lng];
+}
     void allDataEmp() {
         for (Employee j : baseEmp) {
             if (j != null)
