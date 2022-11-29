@@ -1,7 +1,7 @@
 public class Action {
     final static int LESS = 0;
     final static int MORE = 1;
-    /*private final */ Employee[] baseEmp = new Employee[3];
+    private Employee[] baseEmp = new Employee[10];
 
 
     void allDataEmp() {
@@ -185,7 +185,7 @@ public class Action {
     void editSalary(String fullName, double editSalary) {
         for (int i = 0; i < baseEmp.length; i++) {
             if (baseEmp[i] != null && baseEmp[i].getNameEmp().toString().equals(fullName)) {
-               baseEmp[i].setSalary(editSalary);
+                baseEmp[i].setSalary(editSalary);
             }
         }
     }
@@ -200,7 +200,7 @@ public class Action {
     }
 
 
-    void addEmployee(String department, String surname, String name, String patronymic, int salary) {
+    void addEmployee(String department, String surname, String name, String patronymic, double salary) {
         Employee add = new Employee(department, new NameEmployee(surname, name, patronymic), salary);
         boolean check = true;
         for (int i = 0; i < baseEmp.length; i++) {
@@ -214,8 +214,6 @@ public class Action {
         }
         if (check) {
             System.out.println("Внимание! Архив заполнен. Невозможно добавить данные.");
-        } else {
-            System.out.println("Запись добавлена.");
         }
     }
 
