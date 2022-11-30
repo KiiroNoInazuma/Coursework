@@ -221,7 +221,7 @@ Action(int lng){
 
     void deleteEmployee(int id) {
         for (int i = 0; i < baseEmp.length; i++) {
-            if (baseEmp[i].getId() == id) {
+            if (baseEmp[i]!=null&&baseEmp[i].getId() == id) {
                 baseEmp[i] = null;
             }
         }

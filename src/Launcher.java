@@ -1,7 +1,7 @@
 
 public class Launcher {
     public static void main(String[] args) {
-        Action act = new Action(10);
+        Action act = new Action(15);
         act.addEmployee("Долбаебы", "Тимошенко", "Димон", "Анатольевич", 60215.10);
         act.addEmployee("Долбаебы", "Невский", "Александр", "Шварцнегерович", 5000000.25);
         act.addEmployee("Долбаебы", "Бомжатов", "Монгол", "Бухаревич", 20.99);
@@ -12,6 +12,6 @@ public class Launcher {
         act.addEmployee("Администраторы", "Бозов", "Эскель", "Ораколович", 392000.20);
         act.addEmployee("Техподдержка", "Индусов", "Араб", "Тупорылыч", 33220.00);
         act.addEmployee("Техподдержка", "Социопатов", "Димониум", "Картбланшевич", 33220.00);
-        act.editDepartment("Социопатов Димониум Картбланшевич", "Долбаебы");
+
     }
 }
