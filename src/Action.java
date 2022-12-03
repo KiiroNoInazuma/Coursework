@@ -3,9 +3,10 @@ public class Action {
     final static int MORE = 1;
     private Employee[] baseEmp;
 
-Action(int lng){
-    baseEmp = new Employee[lng];
-}
+    Action(int lng) {
+        baseEmp = new Employee[lng];
+    }
+
     void allDataEmp() {
         for (Employee j : baseEmp) {
             if (j != null)
@@ -40,7 +41,7 @@ Action(int lng){
     void sortDepartment() {
         for (int i = 0; i < baseEmp.length; i++) {
             for (int x = 0; x < baseEmp.length; x++) {
-                if (baseEmp[i] == null||baseEmp[x]==null) {
+                if (baseEmp[i] == null || baseEmp[x] == null) {
                     break;
                 }
                 if (baseEmp[i].getDepartment().equals(baseEmp[x].getDepartment()) && i > x)
@@ -50,8 +51,6 @@ Action(int lng){
             }
         }
     }
-
-
 
 
     void chooseSalary(double salary, int choose) {
@@ -238,7 +237,7 @@ Action(int lng){
 
     void deleteEmployee(int id) {
         for (int i = 0; i < baseEmp.length; i++) {
-            if (baseEmp[i]!=null&&baseEmp[i].getId() == id) {
+            if (baseEmp[i] != null && baseEmp[i].getId() == id) {
                 baseEmp[i] = null;
             }
         }
