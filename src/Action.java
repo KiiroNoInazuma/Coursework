@@ -45,7 +45,6 @@ Action(int lng){
                 }
                 if (baseEmp[i].getDepartment().equals(baseEmp[x].getDepartment()) && i > x)
                     break;
-
                 if (baseEmp[i].getDepartment().equals(baseEmp[x].getDepartment()))
                     System.out.println(baseEmp[x].getDepartment() + " --> " + baseEmp[x].getNameEmp());
             }
