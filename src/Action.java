@@ -37,6 +37,24 @@ Action(int lng){
     }
 
 
+    void sortDepartment() {
+        for (int i = 0; i < baseEmp.length; i++) {
+            for (int x = 0; x < baseEmp.length; x++) {
+                if (baseEmp[i] == null||baseEmp[x]==null) {
+                    break;
+                }
+                if (baseEmp[i].getDepartment().equals(baseEmp[x].getDepartment()) && i > x)
+                    break;
+
+                if (baseEmp[i].getDepartment().equals(baseEmp[x].getDepartment()))
+                    System.out.println(baseEmp[x].getDepartment() + " --> " + baseEmp[x].getNameEmp());
+            }
+        }
+    }
+
+
+
+
     void chooseSalary(double salary, int choose) {
         for (Employee j : baseEmp) {
             if (choose == 0) {
