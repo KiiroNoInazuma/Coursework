@@ -12,6 +12,6 @@ public class Launcher {
         act.addEmployee("Долбаебы", "Невский", "Александр", "Шварцнегерович", 5000000.25);
         act.addEmployee("Администраторы", "Админов", "Сергей", "Сервович", 312000.11);
         act.addEmployee("Техподдержка", "Индусов", "Араб", "Тупорылыч", 33220.00);
-act.sortDepartment();
+        act.sortDepartment();
     }
 }

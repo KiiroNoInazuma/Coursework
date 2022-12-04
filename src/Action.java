@@ -44,14 +44,15 @@ public class Action {
                 if (baseEmp[i] == null || baseEmp[x] == null) {
                     break;
                 }
-                if (baseEmp[i].getDepartment().equals(baseEmp[x].getDepartment()) && i > x)
+                if (baseEmp[i].getDepartment().equals(baseEmp[x].getDepartment()) && i > x) {
                     break;
-                if (baseEmp[i].getDepartment().equals(baseEmp[x].getDepartment()))
+                } else if
+                (baseEmp[i].getDepartment().equals(baseEmp[x].getDepartment())) {
                     System.out.println(baseEmp[x].getDepartment() + " --> " + baseEmp[x].getNameEmp());
+                }
             }
         }
     }
-
 
     void chooseSalary(double salary, int choose) {
         for (Employee j : baseEmp) {
